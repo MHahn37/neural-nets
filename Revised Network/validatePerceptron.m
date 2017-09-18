@@ -1,0 +1,119 @@
+function [ correctlyClassified1, classificationErrors1, correctlyClassified2, classificationErrors2, correctlyClassified3, classificationErrors3, correctlyClassified4, classificationErrors4, correctlyClassified5, classificationErrors5, correctlyClassified6, classificationErrors6, class1Results, class2Results, class3Results, class4Results, class5Results, class6Results, class1RealResults, class2RealResults, class3RealResults, class4RealResults, class5RealResults, class6RealResults ] = validatePerceptron( actFunction,hiddenWeights,outputWeights,inputValues,labels,outputFile)
+%VALIDATEPERCEPTRON For testing perceptron after training
+%   
+
+    %How many samples we are testing against
+    testSize = size (inputValues,2);
+    %initial Values for Correct/wrong
+    classificationErrors1=0;
+    correctlyClassified1=0;
+    classificationErrors2=0;
+    correctlyClassified2=0;
+    classificationErrors3=0;
+    correctlyClassified3=0;
+    classificationErrors4=0;
+    correctlyClassified4=0;
+    classificationErrors5=0;
+    correctlyClassified5=0;
+    classificationErrors6=0;
+    correctlyClassified6=0;    
+    %Hold the results/expected in a matrix by input for use later in the
+    %confustion matrix
+    class1Results = zeros(testSize,1);
+    class2Results = zeros(testSize,1);
+    class3Results = zeros(testSize,1);
+    class4Results = zeros(testSize,1);
+    class5Results = zeros(testSize,1);
+    class6Results = zeros(testSize,1);
+    class1RealResults = zeros(testSize,1);
+    class2RealResults = zeros(testSize,1);
+    class3RealResults = zeros(testSize,1);
+    class4RealResults = zeros(testSize,1);
+    class5RealResults = zeros(testSize,1);
+    class6RealResults = zeros(testSize,1);
+    for n = 1:testSize
+        %Do one entry at a time, input is that column
+        inputVector = inputValues(:,n);
+        %Output is that column passed through NN
+        outputVector = evaluatePerceptron(actFunction, hiddenWeights, outputWeights, inputVector);
+        
+        %Classify based on outputs (decideRules returns the index/row with
+        %the highest value. This index - 1 is the expected/actual number.
+        %(We index 1-5 for values 0-4)
+        class1 = decideRules (outputVector(1:1,1));
+        targetClass1 = decideRules (labels(1:1,n));
+        class2 = decideRules (outputVector(2:2,1));
+        targetClass2 = decideRules (labels(2:2,n));
+        class3 = decideRules (outputVector(3:3,1));
+        targetClass3 = decideRules (labels(3:3,n));
+        class4 = decideRules (outputVector(4:4,1));
+        targetClass4 = decideRules (labels(4:4,n));
+        class5 = decideRules (outputVector(5:5,1));
+        targetClass5 = decideRules (labels(5:5,n));
+        class6 = decideRules (outputVector(6:6,1));
+        targetClass6 = decideRules (labels(6:6,n));
+        %Put the values in the confusion matrix outputs
+        class1Results(n) = class1;
+        class2Results(n) = class2;
+        class3Results(n) = class3;
+        class4Results(n) = class4;
+        class5Results(n) = class5;
+        class6Results(n) = class6;
+        class1RealResults(n) = targetClass1;
+        class2RealResults(n) = targetClass2;
+        class3RealResults(n) = targetClass3;
+        class4RealResults(n) = targetClass1;
+        class5RealResults(n) = targetClass5;
+        class6RealResults(n) = targetClass6;
+        %Print classifications and increment counters as needed
+        fprintf(outputFile,'Line: %d Expected: %d,%d,%d,%d,%d,%d Calculated: %d,%d,%d,%d,%d,%d\n',n,targetClass1,targetClass2,targetClass3,targetClass4,targetClass5,targetClass6,class1,class2,class3,class4,class5,class6);
+        if (class1 == targetClass1)
+            correctlyClassified1 = correctlyClassified1 + 1;
+        else
+            classificationErrors1 = classificationErrors1 + 1;
+        end
+        if (class2 == targetClass2)
+            correctlyClassified2 = correctlyClassified2 + 1;
+        else
+            classificationErrors2 = classificationErrors2 + 1;
+        end
+        if (class3 == targetClass3)
+            correctlyClassified3 = correctlyClassified3 + 1;
+        else
+            classificationErrors3 = classificationErrors3 + 1;
+        end
+        if (class4 == targetClass4)
+            correctlyClassified4 = correctlyClassified4 + 1;
+        else
+            classificationErrors4 = classificationErrors4 + 1;
+        end
+        if (class5 == targetClass5)
+            correctlyClassified5 = correctlyClassified5 + 1;
+        else
+            classificationErrors5 = classificationErrors5 + 1;
+        end   
+        if (class6 == targetClass6)
+            correctlyClassified6 = correctlyClassified6 + 1;
+        else
+            classificationErrors6 = classificationErrors6 + 1;
+        end
+    end
+end
+
+function class = decideRules(outputVector)
+%Classify based on outputs (highest output node 1-5 is the one we detected)
+%
+    if (outputVector(1,1) <=0.5)
+        class=0;
+    else
+        class=1;
+    end
+end
+
+ 
+function outputVector = evaluatePerceptron(actFunction,hiddenWeights,outputWeights,inputVector)
+%Evaluate the perceptron using the weights supplied (send each layer
+%through actFunction)
+%
+    outputVector = actFunction(outputWeights*actFunction(hiddenWeights*inputVector));
+end

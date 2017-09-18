@@ -1,0 +1,74 @@
+----------------------------------------
+Training Data Test:
+----------------------------------------
+Line: 1 Expected: 1,1,0,1,0,0 Calculated: 0,1,1,0,1,0
+Line: 2 Expected: 0,0,1,0,1,1 Calculated: 0,1,1,0,1,0
+Line: 3 Expected: 0,1,0,0,1,0 Calculated: 0,1,1,0,1,0
+Line: 4 Expected: 1,1,1,0,0,0 Calculated: 0,1,1,0,1,0
+Line: 5 Expected: 0,1,1,0,1,1 Calculated: 0,1,1,0,1,0
+Line: 6 Expected: 1,1,0,1,1,0 Calculated: 0,1,1,0,1,0
+Line: 7 Expected: 0,0,1,0,1,0 Calculated: 0,1,1,0,1,0
+Line: 8 Expected: 1,1,0,0,0,0 Calculated: 0,1,1,0,1,0
+Line: 9 Expected: 1,1,1,0,1,0 Calculated: 0,1,1,0,1,0
+Line: 10 Expected: 0,0,0,0,0,0 Calculated: 0,1,1,0,1,0
+Line: 11 Expected: 0,0,0,0,0,0 Calculated: 0,1,1,0,1,0
+Line: 12 Expected: 0,0,0,0,0,0 Calculated: 0,1,1,0,1,0
+Line: 13 Expected: 0,0,0,0,0,0 Calculated: 0,1,1,0,1,0
+Line: 14 Expected: 1,1,1,0,1,1 Calculated: 0,1,1,0,1,0
+Line: 15 Expected: 0,0,1,1,0,1 Calculated: 0,1,1,0,1,0
+Line: 16 Expected: 1,1,1,0,1,0 Calculated: 0,1,1,0,1,0
+Line: 17 Expected: 0,1,0,0,0,0 Calculated: 0,1,1,0,1,0
+Line: 18 Expected: 1,1,1,1,1,1 Calculated: 0,1,1,0,1,0
+Line: 19 Expected: 0,1,1,1,1,1 Calculated: 0,1,1,0,1,0
+Line: 20 Expected: 1,1,1,0,1,0 Calculated: 0,1,1,0,1,0
+Line: 21 Expected: 1,0,1,1,1,1 Calculated: 0,1,1,0,1,0
+Line: 22 Expected: 1,0,0,0,1,1 Calculated: 0,1,1,0,1,0
+Line: 23 Expected: 0,1,1,0,1,1 Calculated: 0,1,1,0,1,0
+Line: 24 Expected: 0,1,1,0,0,0 Calculated: 0,1,1,0,1,0
+Line: 25 Expected: 0,1,0,0,0,0 Calculated: 0,1,1,0,1,0
+Line: 26 Expected: 0,1,0,1,1,1 Calculated: 0,1,1,0,1,0
+Line: 27 Expected: 1,0,0,1,1,0 Calculated: 0,1,1,0,1,0
+Line: 28 Expected: 0,0,0,1,1,1 Calculated: 0,1,1,0,1,0
+Line: 29 Expected: 1,0,0,0,0,0 Calculated: 0,1,1,0,1,0
+Line: 30 Expected: 1,1,1,1,1,1 Calculated: 0,1,1,0,1,0
+Line: 31 Expected: 0,0,0,0,0,0 Calculated: 0,1,1,0,1,0
+Line: 32 Expected: 0,0,0,0,1,1 Calculated: 0,1,1,0,1,0
+Line: 33 Expected: 0,1,1,1,1,1 Calculated: 0,1,1,0,1,0
+Line: 34 Expected: 1,1,1,0,0,0 Calculated: 0,1,1,0,1,0
+Line: 35 Expected: 1,1,0,1,0,0 Calculated: 0,1,1,0,1,0
+Line: 36 Expected: 0,0,0,0,0,0 Calculated: 0,1,1,0,1,0
+Line: 37 Expected: 1,1,0,1,1,1 Calculated: 0,1,1,0,1,0
+Line: 38 Expected: 0,1,0,0,1,0 Calculated: 0,1,1,0,1,0
+Line: 39 Expected: 0,1,1,1,0,0 Calculated: 0,1,1,0,1,0
+Line: 40 Expected: 1,0,0,0,0,0 Calculated: 0,1,1,0,1,0
+----------------------------------------
+Testing Data Test:
+----------------------------------------
+Line: 1 Expected: 1,1,1,1,1,1 Calculated: 0,1,1,0,1,0
+Line: 2 Expected: 0,1,1,1,1,1 Calculated: 0,1,1,0,1,0
+Line: 3 Expected: 0,0,0,0,0,1 Calculated: 0,1,1,0,1,0
+Line: 4 Expected: 0,1,0,1,0,0 Calculated: 0,1,1,0,1,0
+Line: 5 Expected: 0,1,0,0,1,0 Calculated: 0,1,1,0,1,0
+Line: 6 Expected: 1,1,0,1,1,1 Calculated: 0,1,1,0,1,0
+Line: 7 Expected: 1,1,1,0,0,0 Calculated: 0,1,1,0,1,0
+Line: 8 Expected: 0,1,0,0,1,0 Calculated: 0,1,1,0,1,0
+Line: 9 Expected: 1,1,1,0,0,0 Calculated: 0,1,1,0,1,0
+Line: 10 Expected: 1,0,0,0,1,1 Calculated: 0,1,1,0,1,0
+Line: 11 Expected: 0,1,1,0,1,0 Calculated: 0,1,1,0,1,0
+Line: 12 Expected: 1,0,0,0,0,0 Calculated: 0,1,1,0,1,0
+Line: 13 Expected: 1,0,0,1,0,0 Calculated: 0,1,1,0,1,0
+Line: 14 Expected: 1,1,1,1,0,1 Calculated: 0,1,1,0,1,0
+Line: 15 Expected: 0,1,1,1,1,1 Calculated: 0,1,1,0,1,0
+Line: 16 Expected: 0,1,1,0,1,1 Calculated: 0,1,1,0,1,0
+Line: 17 Expected: 0,1,1,0,0,0 Calculated: 0,1,1,0,1,0
+Line: 18 Expected: 1,1,1,1,1,1 Calculated: 0,1,1,0,1,0
+----------------------------------------
+Summary For 20000 Iterations:
+----------------------------------------
+Errors In Train Set: 18,16,22,14,18,15
+Correct In Train Set: 22,24,18,26,22,25
+Train Set identified: 55.000000%,60.000000%,45.000000%,65.000000%,55.000000%,62.500000%
+Errors In Test Set: 9,4,8,8,8,9
+Correct In Test Set: 9,14,10,10,10,9
+Train Set identified: 50.000000%,77.777778%,55.555556%,55.555556%,55.555556%,50.000000%
+Total identification rate: 53.448276%,65.517241%,48.275862%,62.068966%,55.172414%,58.620690%
